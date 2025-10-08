@@ -1,0 +1,64 @@
+# 1️⃣ Adicionando linhas (caso ainda não tenha feito)
+echo "O Senhor dos Anéis" >> livro.txt
+echo "Harry Potter" >> livro.txt
+echo "Dom Casmurro" >> livro.txt
+
+echo "O Poderoso Chefão" >> filme.txt
+echo "Titanic" >> filme.txt
+echo "Interestelar" >> filme.txt
+
+echo "Bohemian Rhapsody - Queen" >> musica.txt
+echo "Shape of You - Ed Sheeran" >> musica.txt
+echo "Thriller - Michael Jackson" >> musica.txt
+
+# 2️⃣ Mostrando as primeiras 3 linhas com head
+echo "Primeiras 3 linhas de livro.txt:"
+head -n 3 livro.txt
+
+echo "Primeiras 3 linhas de filme.txt:"
+head -n 3 filme.txt
+
+echo "Primeiras 3 linhas de musica.txt:"
+head -n 3 musica.txt
+
+# 3️⃣ Mostrando as últimas 3 linhas com tail
+echo "Últimas 3 linhas de livro.txt:"
+tail -n 3 livro.txt
+
+echo "Últimas 3 linhas de filme.txt:"
+tail -n 3 filme.txt
+
+echo "Últimas 3 linhas de musica.txt:"
+tail -n 3 musica.txt
+
+# 4️⃣ Buscas simples com grep
+echo "Buscando 'Harry' em livro.txt:"
+grep "Harry" livro.txt
+
+echo "Buscando 'Titanic' em filme.txt:"
+grep "Titanic" filme.txt
+
+echo "Buscando 'Queen' em musica.txt:"
+grep "Queen" musica.txt
+
+# 5️⃣ Buscar ignorando maiúsculas/minúsculas e mostrando número da linha
+echo "Buscando 'dom' em livro.txt (ignora maiúsculas/minúsculas):"
+grep -i -n "dom" livro.txt
+
+# 6️⃣ Buscar múltiplas palavras (OR)
+echo "Buscando 'Harry' ou 'Dom' em livro.txt:"
+grep -E "Harry|Dom" livro.txt
+
+# 7️⃣ Contar quantas vezes uma palavra aparece
+echo "Contando ocorrências de 'Titanic' em filme.txt:"
+grep -c "Titanic" filme.txt
+
+echo "Contando ocorrências de 'Queen' em musica.txt:"
+grep -c "Queen" musica.txt
+
+# 8️⃣ Mostrar linhas antes e depois da ocorrência
+echo "Mostrando 1 linha antes e 1 linha depois de 'Harry' em livro.txt:"
+grep -C 1 "Harry" livro.txt
+
+echo "Mostrando 2 linhas antes e 2 linhas depois de 'Titanic' em filme.txt:"
+grep -C 2 "Titanic" filme.txt
