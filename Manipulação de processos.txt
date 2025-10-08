@@ -1,0 +1,17 @@
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+pdita000@PDITA3353:~$ mv livro.txt filme.txt musica.txt ~/Documents/
+mv: cannot stat 'livro.txt': No such file or directory
+mv: cannot stat 'filme.txt': No such file or directory
+mv: cannot stat 'musica.txt': No such file or directory
+pdita000@PDITA3353:~$ touch livro.txt filme.txt musica.txt
+pdita000@PDITA3353:~$ ls
+Documents  filme.txt  livro.txt  musica.txt
+pdita000@PDITA3353:~$ mkdir -p ~/Documents
+pdita000@PDITA3353:~$ mv livro.txt filme.txt musica.txt ~/Documents/
+pdita000@PDITA3353:~$ ls ~/Documents
+Listas  Resultados  Scripts  filme.txt  livro.txt  musica.txt
+pdita000@PDITA3353:~$ ls ~/Documents
+Listas  Resultados  Scripts  filme.txt  livro.txt  musica.txt
+pdita000@PDITA3353:~$
