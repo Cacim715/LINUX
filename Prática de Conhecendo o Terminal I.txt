@@ -1,0 +1,27 @@
+#!/bin/bash
+# Prática de Conhecendo o Terminal I - Script de Exemplos
+
+echo "=== Listando arquivos do diretório atual ==="
+ls
+echo
+
+echo "=== Mostrando ajuda do comando ls ==="
+ls --help | head -n 15   # Mostra só as primeiras 15 linhas do help para não poluir a tela
+echo
+
+echo "=== Listando arquivos com detalhes (-l) ==="
+ls -l
+echo
+
+# Defina aqui um diretório para exemplo (substitua pelo seu caminho se quiser)
+EXEMPLO_DIR="$HOME"
+
+echo "=== Listando um diretório específico ($EXEMPLO_DIR) ==="
+ls "$EXEMPLO_DIR"
+echo
+
+echo "=== Listando um diretório com detalhes (-l) ==="
+ls -l "$EXEMPLO_DIR"
+echo
+
+echo "=== Fim da prática de ls ==="
