@@ -1,0 +1,38 @@
+#!/bin/bash
+# Script: manipula_arquivos_avancado.sh
+# Objetivo: Criar cópias, renomear para _bkp, mostrar conteúdo e apagar com confirmação
+
+# Lista de arquivos
+arquivos=("livro.txt" "filme.txt" "musica.txt")
+
+echo "== INICIANDO PRÁTICA DE MANIPULAÇÃO DE ARQUIVOS =="
+
+for arquivo in "${arquivos[@]}"; do
+  bkp="${arquivo%.txt}_bkp.txt"
+  
+  # Criar cópia e renomear direto para _bkp
+  cp "$arquivo" "$bkp"
+  echo "Cópia criada e renomeada: $bkp"
+
+  # Mostrar conteúdo do backup
+  echo "---- Conteúdo de $bkp ----"
+  cat "$bkp"
+  echo "---------------------------"
+
+  # Perguntar antes de apagar
+  read -p "Deseja apagar o backup $bkp? (s/n) " resposta
+  case "$resposta" in
+    [Ss]* )
+      rm "$bkp"
+      echo "Backup apagado: $bkp"
+      ;;
+    [Nn]* )
+      echo "Backup mantido: $bkp"
+      ;;
+    * )
+      echo "Resposta inválida. Backup mantido: $bkp"
+      ;;
+  esac
+done
+
+echo "== PRÁTICA FINALIZADA =="
